@@ -19,6 +19,10 @@
       </div>
     </header>
 
+    <section id="earbuds-canvas-section">
+      <canvas id="earbudsCanvas"></canvas>
+    </section>
+
     <main>
       <section class="hero">
         <div class="container hero__content">
@@ -27,18 +31,6 @@
           <a href="#ar-experience" class="btn btn--primary">Explore Model</a>
         </div>
       </section>
-
-      <section id="scrollSection">
-        <model-viewer
-        id="scrollModel"
-        src="model/earbuds_case.glb"
-        autoplay="false"
-        camera-controls
-        disable-zoom
-        style="width: 100%; height: 600px"
-        ></model-viewer>
-      </section>
-
 
       <section id="features" class="features">
         <div class="container">
@@ -75,7 +67,7 @@
             id="model"
             src="model/ion-model.gltf"
             camera-controls
-            poster="images/poster.webp"
+            poster="images/black.png"
             shadow-intensity="1"
             environment-image="images/aircraft_workshop_01_1k.hdr"
             exposure="1.5"
