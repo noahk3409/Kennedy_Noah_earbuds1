@@ -51,45 +51,53 @@
   });
 })();
 
-// Scroll animations
+// Scroll animation
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".scroll-box", {
-  opacity: 0,
-  y: 50,
-  duration: 1.3,
-  ease: "power3.out",
+const frameCount = 41; 
+const images = [];
+let loadedImages = 0;
+
+const canvas = document.querySelector("#earbudsCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = 1920;
+canvas.height = 1080;
+
+for (let i = 0; i < frameCount; i++) {
+  const img = new Image();
+  img.src = `images/earbud_animation${String(i).padStart(4, "0")}.jpg`;
+
+  img.onload = () => {
+    loadedImages++;
+    if (loadedImages === 1) drawImage(0);
+  };
+
+  images.push(img);
+}
+
+function drawImage(index) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(images[index], 0, 0, canvas.width, canvas.height);
+}
+
+const animation = { frame: 0 };
+
+gsap.to(animation, {
+  frame: frameCount - 1,
+  ease: "none",
   scrollTrigger: {
-    trigger: "#scrollSection",
-    start: "top 80%", 
-    end: "top 30%",
-    scrub: false,       
-    markers: false      
+    trigger: "#earbuds-canvas-section",
+    scrub: 1,
+    start: "top",
+    end: "bottom+=800 top",  
+    pin: true,                 
+    anticipatePin: 1
+  },
+
+  onUpdate: () => {
+    const index = Math.round(animation.frame);
+    if (images[index]) drawImage(index);
   }
-});
-
-gsap.registerPlugin(ScrollTrigger);
-
-const model = document.querySelector("#scrollSection model-viewer");
-
-model.addEventListener("load", () => {
-  
-  const animation = model.model.animations[0];
-  const duration = animation.duration;
-
-  model.pause();
-
-  gsap.to(model, {
-    animationTime: duration,  
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#scrollSection",
-      start: "top 80%",
-      end: "bottom 20%",
-      scrub: 1,
-      markers: false
-    }
-  });
-
 });

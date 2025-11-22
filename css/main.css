@@ -2,7 +2,7 @@
   
   --bg-1: white;
   --bg-2: #e8e8e8;     
-  --bg-3: #cacaca;     
+  --bg-3: #999999;     
   --accent: #1A73E8;   
   --text: black;     
   --muted: #1f1c19;     
@@ -165,16 +165,14 @@ model-viewer {
   height: auto;
 }
 
-
 #scrollSection {
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 1000vh; 
+  background: black;
 }
 
-.scroll-box {
-  font-size: 2rem;
-  opacity: 0;
-  transform: translateY(50px);
+#earbudsCanvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  object-fit: cover;
 }
