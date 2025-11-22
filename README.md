@@ -1,7 +1,7 @@
-# 🎧 Earbuds — Interactive 3D Product Website
+# 🎧 Ion Earbuds — Interactive 3D Product Website
 
 ## Overview
-**Earbuds** is an interactive product showcase website built to demonstrate a 3D model experience using **HTML**, **CSS**, and **JavaScript**.  
+**Ion Earbuds** is an interactive product showcase website built to demonstrate a 3D model experience using **HTML**, **CSS**, and **JavaScript**.  
 It integrates a real-time 3D viewer powered by the `<model-viewer>` API, allowing users to explore and interact with the product from any angle.  
 The site includes animated hotspots, smooth transitions, and a clean, responsive layout for all devices.
 
