@@ -23,7 +23,7 @@ The site includes animated hotspots, smooth transitions, and a clean, responsive
 
 ## 🛠️ Tools & Technologies
 - **HTML5 / CSS3 / SASS**
-- **JavaScript (ES6)**
+- **JavaScript**
 - **Model Viewer API**
 - **GreenSock (GSAP)**
 - **GitHub / GitHub Pages**
