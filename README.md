@@ -11,13 +11,13 @@ The site includes animated hotspots, smooth transitions, and a clean, responsive
 - **Interactive 3D Model Viewer**
   - Explore the earbuds model in full 3D.
   - View animated hotspots that highlight product features.
-  - AR support enabled (WebXR + Scene Viewer modes).
+  - AR support enabled.
 - **Smooth Animations**
   - Uses **GSAP (GreenSock)** for subtle transitions and motion.
 - **Responsive Layout**
   - Fully adaptive grid and flexible typography for all screen sizes.
 - **Modern Styling**
-  - Designed with a **black and gold** color scheme for a premium look.
+  - Designed with a **Black and Blue** color scheme for a modern look.
 
 ---
 
